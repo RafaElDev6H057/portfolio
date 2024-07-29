@@ -1,0 +1,67 @@
+---
+import "@fontsource-variable/inter";
+import "@fontsource/poppins";
+
+interface Props {
+  title: string;
+}
+
+const { title } = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content="Astro description" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{title}</title>
+  </head>
+  <body class="bg-custom-radial bg-custom-size bg-[#0f172a] text-white p-4">
+    <slot />
+    <script>
+      import "../scripts/script.js";
+    </script>
+  </body>
+</html>
+<style is:global>
+  body {
+    font-family: "Poppins", sans-serif;
+  }
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: "Inter Variable", sans-serif;
+  }
+
+  p {
+    color: #94a3b8;
+  }
+
+  .header__navigation__spotlight {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 1200px;
+    height: 1200px;
+    background: radial-gradient(
+      800px circle at center,
+      rgba(29, 78, 216, 0.15),
+      transparent 60%
+    );
+    pointer-events: none;
+    opacity: 0;
+    z-index: 30;
+    transition: opacity 0.1s;
+    /* Ajustar la duración de la transición para mayor rapidez */
+  }
+
+  body:hover .header__navigation__spotlight {
+    opacity: 1;
+  }
+</style>

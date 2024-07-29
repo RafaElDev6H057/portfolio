@@ -1,0 +1,42 @@
+---
+import NavegacionPrincipal from "./NavegacionPrincipal.astro";
+import NavegacionSocial from "./NavegacionSocial.astro";
+---
+
+<header class="sticky top-0 flex h-screen w-1/2 flex-col justify-between py-24">
+  <div>
+    <h1 class="text-5xl font-bold text-gris-fuerte m-0 tracking-[8px]">
+      <a href="#">
+        <span class="text-red-600">&lt;</span>RafaElDev<span
+          class="text-red-600">/&gt;</span
+        >
+      </a>
+    </h1>
+    <h2
+      class="mt-3 mb-0 text-xl font-semibold tracking-widest text-gris-fuerte"
+    >
+      Frontend <span class="text-red-600">&</span> Backend Lover <span
+        class="text-red-600">&lt;3</span
+      >
+    </h2>
+    <p class="mt-4 max-w-80 leading-[1.5] mb-0">
+      Me gusta hacer proyectos web, diseñar páginas y aprender mas tecnologias
+      relacionadas al mundo del desarrollo web.
+    </p>
+
+    <nav class="block mt-16">
+      <ul class="w-max m-0">
+        <NavegacionPrincipal url="#" texto="Sobre mi" />
+        <NavegacionPrincipal url="#" texto="Habilidades" />
+        <NavegacionPrincipal url="#" texto="Proyectos" />
+        <NavegacionPrincipal url="#" texto="Contacto" />
+      </ul>
+    </nav>
+  </div>
+  <div
+    class="header__navigation__spotlight"
+    style="opacity: 1; transform: translate(373px, -225px);"
+  >
+  </div>
+  <NavegacionSocial />
+</header>
